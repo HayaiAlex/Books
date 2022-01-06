@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  color: aliceblue;
 }
 
 
@@ -27,7 +28,9 @@ th, td {
   display: flex;
   flex-direction: row;
   width: 100%-50px;
-  margin: 50px;
+  padding: 50px;
+
+  background-color: skyblue;
 }
 
 .flexcol {
@@ -39,10 +42,18 @@ th, td {
 
 
 
-[data-pages-read="0"] {background-color: white;}
+[data-pages-read="0"] {background-color: rgb(224, 224, 224);}
 [data-pages-read="1"] {background-color: brown;}
 [data-pages-read="2"] {background-color: cadetblue;}
 [data-pages-read="3"]  {background-color: coral;}
 [data-pages-read="4"] {background-color: cyan;}
 [data-pages-read="5"] {background-color: darkorchid;}
 [data-pages-read="6"] {background-color: seagreen;}
+
+table {
+  background-color:rgb(224, 224, 224);
+}
+
+body {
+  background-color: slategrey;
+}
