@@ -27,7 +27,6 @@
       var num = 1;
 
       if (element.hasAttribute("data-pages-read")) {
-        console.log("has read pages");
         num = element.getAttribute("data-pages-read");
         num = Number(num.substring(num.length-1))+1;
         if (num>maxRead) {
@@ -35,7 +34,6 @@
         }
       }
 
-      console.log(num)
 
       element.setAttribute("data-pages-read",num);
     }
