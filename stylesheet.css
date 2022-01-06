@@ -39,6 +39,7 @@ th, td {
 
 
 
+[data-pages-read="0"] {background-color: white;}
 [data-pages-read="1"] {background-color: brown;}
 [data-pages-read="2"] {background-color: cadetblue;}
 [data-pages-read="3"]  {background-color: coral;}

@@ -10,18 +10,34 @@
   <script type="text/javascript">
     window.onload=function() {
       document.getElementById("pagesread").addEventListener("click",toggleColour)
+      myStorage = window.localStorage;
+      console.log(myStorage);
+      console.log(document.getElementById("pagesread").getElementsByTagName("tr"));
+      populatePagesRead();
     }
 
+    function populatePagesRead() {
+      rows = document.getElementById("pagesread").getElementsByTagName("tr")
+      for (data in myStorage) {
+        splitData = data.split("_");
+        row = splitData[0];
+        col = splitData[1];
+        element = rows[row].cells[col];
+
+        element.setAttribute("data-pages-read",myStorage[data]);
+      }
+    }
 
     function toggleColour(clickData) {
       var element = clickData.target
-      
+      console.log(clickData)
       if (element.nodeName != "TD") {
         return
       }
       if (element.innerHTML != "") {
         return
       }
+
 
       var maxRead = 6;
       var num = 1;
@@ -30,12 +46,18 @@
         num = element.getAttribute("data-pages-read");
         num = Number(num.substring(num.length-1))+1;
         if (num>maxRead) {
-          num = 1
+          num = 0
         }
       }
 
 
       element.setAttribute("data-pages-read",num);
+
+      row = clickData.path[1].rowIndex
+      col = element.cellIndex
+
+      key = row + "_" + col
+      localStorage.setItem(key,num)
     }
   </script>
 
