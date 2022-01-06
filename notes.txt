@@ -1,0 +1,19 @@
+Use goods reads API/downloads
+Can use a javascript webscrape library for book covers
+
+
+=============
+    Pages
+=============
+
+-Bookshelf pages of all read books (filter by genre, date, etc)
+
+-Form for reviewing books which goes to reviews page
+
+-Database for all my books/reviews
+
+-To read, reading, read page
+
+-Daily tracker for pages read
+
+-
