@@ -5,14 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Books</title>
-  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="/css/stylesheet.css">
 
   <script type="text/javascript">
     window.onload=function() {
       document.getElementById("pagesread").addEventListener("click",toggleColour)
       myStorage = window.localStorage;
-      console.log(myStorage);
-      console.log(document.getElementById("pagesread").getElementsByTagName("tr"));
       populatePagesRead();
     }
 
@@ -22,6 +20,7 @@
         splitData = data.split("_");
         row = splitData[0];
         col = splitData[1];
+        if (isNaN(row) && isNaN(col)) { return }
         element = rows[row].cells[col];
 
         element.setAttribute("data-pages-read",myStorage[data]);
@@ -30,7 +29,6 @@
 
     function toggleColour(clickData) {
       var element = clickData.target
-      console.log(clickData)
       if (element.nodeName != "TD") {
         return
       }
@@ -64,9 +62,31 @@
 
 </head>
 <body>
-  <h1>My Books</h1>
+  <header>
+    <h1>My Books</h1>
 
 
+    <nav id="mainNav">
+      <ul>
+        <a href="">
+          <li>Home</li>
+        </a>
+        <a href="">
+          <li>My Books</li>
+        </a><a href="">
+          <li>Trackers</li>
+        </a><a href="">
+          <li>Reviews</li>
+        </a><a href="">
+          <li>Genres</li>
+        </a>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  
   <div class="flexrow">
     <table id="pagesread">
       <tr>
@@ -583,5 +603,9 @@
       </table>
     </div>
   </div>
+
+  <footer>
+    <p>Developed by Alex Adams</p>
+  </footer>
 </body>
 </html>

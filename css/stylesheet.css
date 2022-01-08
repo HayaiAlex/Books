@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: slategrey;
+}
+
+h1 {
+  text-align: center;
+  color: aliceblue;
+  padding: 1rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainNav {
+  background-color: lightgray;
+}
+
+#mainNav ul {
+  list-style: none;
+}
+
+#mainNav ul::after{
+  content: '';
+  display: table;
+  clear: left;
+}
+
+#mainNav li {
+  color: black;
+  float: left;
+  padding: 0.25rem 2rem;
+  background-color: #b3b3b3;
+}
+
+@media screen and (max-width: 700px) {
+  #mainNav li {
+    float: none;
+    text-align: center;
+  }
+}
+
+#mainNav li:hover {
+  background-color: lightgray;
+  color: white;
+}
+
+#mainNav a {
+  text-decoration: none;
+}
+
+
+#pagesread {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.pagesreadkey {
+  border-collapse: collapse;
+}
+
+
+th, td { 
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  flex-basis: 20px;;
+  box-sizing: border-box;
+}
+
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: auto;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: steelblue;
+}
+
+.flexcol {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.flexcol h4 {
+  padding: 0.3rem 0;
+}
+
+.flexcol th {
+  width: auto;
+  padding: 0px 5px;
+}
+
+
+
+[data-pages-read="0"] {background-color: rgb(224, 224, 224);}
+[data-pages-read="1"] {background-color: brown;}
+[data-pages-read="2"] {background-color: cadetblue;}
+[data-pages-read="3"]  {background-color: coral;}
+[data-pages-read="4"] {background-color: cyan;}
+[data-pages-read="5"] {background-color: darkorchid;}
+[data-pages-read="6"] {background-color: seagreen;}
+
+table {
+  background-color:rgb(224, 224, 224);
+}
+
+footer {
+  background-color: slategrey;
+}
+
+footer p {
+  text-align: center;
+  color: aliceblue;
+  padding: 0.5rem;
+}
